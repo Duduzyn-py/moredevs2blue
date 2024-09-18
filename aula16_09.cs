@@ -85,4 +85,4 @@ Console.WriteLine($"Voce nasce em: {nascimento.ToString("dd/MM/yyyy")}");
 
 //TO String -> DATE TIME -> pode ser passado parametros
 //toString é capaz de modular por templates os resultados
-//
+// dd/MM/yyyy HH:mm:ss
