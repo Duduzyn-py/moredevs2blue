@@ -63,14 +63,14 @@
 
 //using System.Net.NetworkInformation;
 
-//const int DIA = 01;
-//const string cpf = 11111111111;
+const int num = 01;
+const string cpf = 11111111111;
 
-//string meuNome = "Eduardo Caitano";
-//int minhaIdade = 20;
-//char umaLtra = 'A';
-//bool estouVivo = true;
-//double media = 9.9;
+string meuNome = "Eduardo Caitano";
+int minhaIdade = 20;
+char umaLtra = 'A';
+bool estouVivo = true;
+double media = 9.9;
 
 var nascimento = new DateTime();
 
