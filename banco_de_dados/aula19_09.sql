@@ -1,1 +1,38 @@
+/**
+INICIO DA PARTE CODADA DO SQL, APENA VENDO E INICIANDO OS COMANDOS
+*/
 
+CREATE TABLE CLIENTE(
+	id INT AUTO_INCREMENT,
+    nome VARCHAR(255),
+    email VARCHAR(255),
+    telefone VARCHAR(15),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE PECA(
+	id INT AUTO_INCREMENT,
+    descricao VARCHAR(255),
+    preco DECIMAL(10,2),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE ORDEM_SERVICO(
+	id INT AUTO_INCREMENT,
+    descricao VARCHAR(255),
+    data_ordem DATE,
+    valor DECIMAL(10,2),
+    cliente_id INT,
+    PRIMARY KEY (id),
+    CONSTRAINT  `FK_ORDEM_SERVICO_CLIENTE` FOREIGN KEY (cliente_id) REFERENCES CLIENTE (id)
+);
+
+CREATE TABLE ORDEM_SERVICO_PECA (
+	ordem_servico_id INT,
+    peca_id INT, 
+    quantidade INT,
+    preco DECIMAL(10, 2),
+    PRIMARY KEY (ordem_servico_id, peca_id),
+	CONSTRAINT `FK_ORDEM_SERVICO_PECA_ORDEM_SERVICO` FOREIGN KEY (ordem_servico_id) REFERENCES ORDEM_SERVICO (id),
+    CONSTRAINT `FK_ORDEM_SERVICO_PECA_PECA` FOREIGN KEY (peca_id) REFERENCES PECA (id)
+);
