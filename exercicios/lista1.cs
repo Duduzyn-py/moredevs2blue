@@ -28,7 +28,7 @@ int multiplicante = int.Parse(Console.ReadLine());
 Console.WriteLine("Escreva um numero inteiro: ");
 int multiplicador = int.Parse(Console.ReadLine());
 int produto = multiplicador * multiplicante;
-Console.WriteLine($"O produto dos números é: {}");
+Console.WriteLine($"O produto dos números é: {produto}");
 
 //Exercicio 4:
 //4. Escreva um programa que leia dois números inteiros e mostre o resultado da divisão do primeiro pelo segundo.
@@ -39,7 +39,7 @@ int dividendo = int.Parse(Console.ReadLine());
 Console.WriteLine("Escreva um numero inteiro: ");
 int divisor = int.Parse(Console.ReadLine());
 int quociente = dividendo / divisor;
-Console.WriteLine($"O quociente dos números é: {}");
+Console.WriteLine($"O quociente dos números é: {quociente}");
 
 //Exercicio 5:
 //5. Escreva um programa que leia dois números inteiros e exiba o resto da divisão do primeiro pelo segundo.
