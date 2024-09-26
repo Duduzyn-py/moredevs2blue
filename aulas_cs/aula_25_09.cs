@@ -86,3 +86,13 @@ for (int i = 0; i < nomes.Count; i++)
 }
 */
 
+/*
+//FOR SIMPLES PARA MOSTRAR A TABUADA DE UM DETERMINADO NUMERO ATÉ *10
+Console.WriteLine("Digite um número");
+int num = int.Parse(Console.ReadLine());
+Console.WriteLine($"VEJA ABAIXO A TABUADA DO {num}");
+for (int i = 1; i < 11; i++)
+{
+    Console.WriteLine($"{num} * {i} = {num*i}");
+}
+*/
