@@ -41,3 +41,48 @@ Console.WriteLine($"{nomes[2]}: {notas[2]} ");
 Console.WriteLine($"{nomes[3]}: {notas[3]} ");
 Console.WriteLine($"{nomes[4]}: {notas[4]} ");
 
+//LISTAS
+
+List<string> nomes = new List<string>();
+List<float> notas = new List<float>();
+
+Console.WriteLine("Digite o nome do aluno:");
+nomes.Add(Console.ReadLine());
+Console.WriteLine("Digite a nota:");
+notas.Add(float.Parse(Console.ReadLine()));
+
+Console.WriteLine("Digite o nome do aluno:");
+nomes.Add(Console.ReadLine());
+Console.WriteLine("Digite a nota:");
+notas.Add(float.Parse(Console.ReadLine()));
+
+Console.WriteLine("Digite o nome do aluno:");
+nomes.Add(Console.ReadLine());
+Console.WriteLine("Digite a nota:");
+notas.Add(float.Parse(Console.ReadLine()));
+
+Console.WriteLine("Digite o nome do aluno:");
+nomes.Add(Console.ReadLine());
+Console.WriteLine("Digite a nota:");
+notas.Add(float.Parse(Console.ReadLine()));
+
+Console.WriteLine("Digite o nome do aluno:");
+nomes.Add(Console.ReadLine());
+Console.WriteLine("Digite a nota:");
+notas.Add(float.Parse(Console.ReadLine()));
+
+Console.WriteLine("\nNOTAS DOS ALUNOS ABAIXO:");
+Console.WriteLine($"{nomes[0]}: {notas[0]}");
+Console.WriteLine($"{nomes[1]}: {notas[1]}");
+Console.WriteLine($"{nomes[2]}: {notas[2]}");
+Console.WriteLine($"{nomes[3]}: {notas[3]}");
+Console.WriteLine($"{nomes[4]}: {notas[4]}");
+
+/*
+Console.WriteLine("\nNOTAS DOS ALUNOS ABAIXO:");
+for (int i = 0; i < nomes.Count; i++)
+{
+    Console.WriteLine($"{nomes[i]}: {notas[i]}");
+}
+*/
+
