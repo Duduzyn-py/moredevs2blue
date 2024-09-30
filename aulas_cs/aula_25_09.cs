@@ -96,23 +96,3 @@ for (int i = 1; i <= 10; i++)
     Console.WriteLine($"{num} * {i} = {num*i}");
 }
 */
-/*
-List<int> num = new List<int>();
-Console.WriteLine("Informe um número ou 0 para sair");
-var verificar = int.Parse(Console.ReadLine());
-
-while (verificar != 0)
-{ 
-    num.Add(verificar);
-    Console.WriteLine("Numero adicionado");
-
-    Console.WriteLine("Informe outro numero ou 0 para sair");
-}
-
-int valorMin = num[int.MaxValue];
-Console.WriteLine(valorMin.ToString());
-//for (int i = 0; i < num.Count; i++)
-//{
-//    valorMin = num[int.MaxValue];
-//}
-*/
