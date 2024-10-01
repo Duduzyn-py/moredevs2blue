@@ -79,3 +79,27 @@ foreach (var car in carros)
 {
     Console.WriteLine(car);
 }
+//EXERCICIO MODELO
+var turma = new List<string>();
+string nome = "";
+int id = 1;
+do
+{
+
+    Console.WriteLine("Digite o nome do aluno ou OK para finalizar o cadastrament");
+    nome = Console.ReadLine();
+    if (nome.ToUpper() != "OK")
+    {
+        turma.Add(nome);
+    }   
+
+} while (nome.ToUpper() != "OK");
+
+Console.WriteLine("Cadastro finalizado.");
+Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+foreach (string alunos in turma)
+{
+    Console.WriteLine($"#{id} {alunos}");
+    id++;
+}
+Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
