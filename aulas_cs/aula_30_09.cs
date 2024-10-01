@@ -54,7 +54,7 @@ do
     }
 } while (entrada.ToUpper() != "OK");
 
-/*
+/* EXERCÌCIO EXEMPLO DE DO-WHILE
 string senha = "flavinhodupneu";
 string tentativa = "";
 do
@@ -73,3 +73,9 @@ do
 }while (tentativa != senha);
 
 */
+//FOREACH
+var carros = new List<string>() { "UNO", "CELTA", "CORSA" };
+foreach (var car in carros)
+{
+    Console.WriteLine(car);
+}
