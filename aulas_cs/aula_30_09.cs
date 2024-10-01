@@ -53,3 +53,23 @@ do
         Console.Write("ISSO AI NÃO É UM NUMERO!");
     }
 } while (entrada.ToUpper() != "OK");
+
+/*
+string senha = "flavinhodupneu";
+string tentativa = "";
+do
+{
+    Console.WriteLine("Digite a senha de acesso: ");
+    tentativa = Console.ReadLine();
+
+    if (tentativa == senha)
+    {
+        Console.WriteLine("Acesso permitido.");
+    }
+    else if (tentativa != senha)
+    {
+        Console.WriteLine("Senha incorreta por favor tente novament");
+    }
+}while (tentativa != senha);
+
+*/
