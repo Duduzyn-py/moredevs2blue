@@ -74,8 +74,7 @@ while (contador < numeros.Length)
 int contagem = 0;
 foreach (int num in numeros)
 {
-    contagem += num;
-    
+    contagem += num;  
 }
 Console.Clear();
 Console.WriteLine(contagem);
