@@ -121,3 +121,27 @@ foreach (string nome in nomes.Reverse())
 {
     Console.WriteLine(nome);
 }
+
+//LISTAS
+//1. Escreva um programa que peça ao usuário uma quantidade indeterminada de nomes.
+//Ao final da execução, exiba todos os nomes informados pelo usuário (Sinta-se à vontade
+//para definir o gatilho desejado para encerrar a coleta de nomes).
+List<string> listaNomes = new List<string>();
+string nome = string.Empty;
+int contador = 0;
+do
+{
+    Console.WriteLine("Digite um nome ou OK para sair");
+    nome = Console.ReadLine();
+
+    if (nome.ToUpper() != "OK")
+    {
+        listaNomes.Add(nome);
+    }
+} while (nome.ToUpper() != "OK");
+
+foreach (string nomes in listaNomes)
+{
+    Console.WriteLine($"#{++contador} {nomes}");
+}
+
