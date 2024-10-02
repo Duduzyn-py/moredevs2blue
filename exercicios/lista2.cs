@@ -106,3 +106,18 @@ foreach (int numero in numeros)
 }
 Console.WriteLine($"O maior numero informado foi: {maiorNum}");
 Console.WriteLine($"O menor número digitado for: {menorNum}");
+
+//3. Escreva um programa que peça ao usuário 5 nomes e armazene-os em um Array.
+//Após isso exiba os nomes na ordem inversa da qual foram inseridos.
+string[] nomes = new string[5];
+int contador = 0;
+while (contador < nomes.Length)
+{
+    Console.WriteLine("digite um nome: ");
+    nomes[contador] = Console.ReadLine();
+    contador++;
+}
+foreach (string nome in nomes.Reverse())
+{
+    Console.WriteLine(nome);
+}
