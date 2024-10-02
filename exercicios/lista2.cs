@@ -59,3 +59,51 @@ switch (diaSemana)
         Console.WriteLine("Sábado");
         break;
 }
+
+//INSTRUÇÃO ARRAY
+//1. Escreva um programa que peça ao usuário 5 valores numéricos e armazene-os em um Array.
+//Calcule a soma de todos esses números e exiba o resultado na tela
+int[] numeros = new int[5];
+int contador = 0;
+while (contador < numeros.Length)
+{
+    Console.WriteLine("digite um numero");
+    numeros[contador] = int.Parse(Console.ReadLine());
+    contador++;
+}
+int contagem = 0;
+foreach (int num in numeros)
+{
+    contagem += num;
+    
+}
+Console.Clear();
+Console.WriteLine(contagem);
+    
+//2. Escreva um programa que peça ao usuário 10 números e armazene-os em um Array.
+//O programa deve identificar o maior e o menor número informado pelo usuário.
+int[] numeros = new int[10];
+int contador = 0;
+while (contador < numeros.Length)
+{
+    Console.WriteLine("digite um numero");
+    numeros[contador] = int.Parse(Console.ReadLine());
+    contador++;
+}
+
+int maiorNum = int.MinValue;
+int menorNum = int.MaxValue;
+
+foreach (int numero in numeros)
+{
+    if (numero > maiorNum)
+    {
+        maiorNum = numero;
+    }
+    else if (numero < menorNum)
+    {
+        menorNum = numero;
+    }
+}
+Console.WriteLine($"O maior numero informado foi: {maiorNum}");
+Console.WriteLine($"O menor número digitado for: {menorNum}");
