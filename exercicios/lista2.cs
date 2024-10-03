@@ -145,3 +145,61 @@ foreach (string nomes in listaNomes)
     Console.WriteLine($"#{++contador} {nomes}");
 }
 
+//2. Escreva um programa que possua uma lista com 10 número de sua preferência, os quais devem estar
+//entre 1 e 100. Peça para o usuário informar um número de 1 a 100 e após isso verifique se o número
+//está presente na lista criada inicialmente. Dê três chances para o usuário acertar o máximo de números.
+
+List<int> listaNumeros = new List<int>();
+listaNumeros.Add(45);
+listaNumeros.Add(15);
+listaNumeros.Add(99);
+listaNumeros.Add(56);
+listaNumeros.Add(8);
+listaNumeros.Add(18);
+listaNumeros.Add(67);
+listaNumeros.Add(53);
+listaNumeros.Add(79);
+listaNumeros.Add(12);
+
+int contador = 0;
+int numeroMagico = 0;
+bool validar = false;
+int aux = 3;
+while(contador < 3)
+{
+    Console.WriteLine("Tente adivinhar um número(entre 0 e 100): ");
+    numeroMagico = int.Parse(Console.ReadLine());
+
+    foreach (int numero in listaNumeros) { 
+        if (numero == numeroMagico)
+        {
+            validar = true;
+            Console.WriteLine(validar);
+            break; 
+        }
+    }
+    Console.WriteLine($"Você tem mais {--aux} chances");
+    contador++;
+
+}
+
+//INSTRUÇÃO FOR
+//1. Escreva um programa que peça ao usuário um número inteiro positivo e calcule o fatorial desse número
+//usando um loop for. Por exemplo: 5! = 5×4×3×2×1=120. 3! = 3×2×1=6. 0! = 1 (por definição).
+Console.WriteLine("Digite um numero pra ver seu fatorial: ");
+int num = int.Parse(Console.ReadLine());
+int fatorial = 0;
+int aux = num;
+for (int i = 0; i <= num; i++)
+{
+    if (aux != 1)
+    {
+        fatorial *= aux * aux - i;
+        aux--;
+    }  
+    else
+    {
+        break;
+    }
+}
+Console.WriteLine(fatorial);
