@@ -1,3 +1,6 @@
+//Usar o diretorio para chamar a funcao
+// ConsoleApp2.Executor.Executar();
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
