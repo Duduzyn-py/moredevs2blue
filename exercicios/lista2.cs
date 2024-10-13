@@ -319,7 +319,7 @@ do
             if (saque > 0 && saque <= saldo)
             {
                 saldo -= saque;
-                Console.WriteLine($"Saque de R$ {saque:F2} realizado com sucesso!");
+                Console.WriteLine($"Saque de R$ {saque} realizado com sucesso!");
             }
             else
             {
