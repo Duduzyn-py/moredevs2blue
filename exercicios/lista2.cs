@@ -203,3 +203,138 @@ for (int i = 0; i <= num; i++)
     }
 }
 Console.WriteLine(fatorial);
+    
+ //2. Escreva um rograma  que peça ao usuário um número e exiba a tabuada desse número para o usuario
+Console.WriteLine("Digite um número");
+int num = int.Parse(Console.ReadLine());
+Console.WriteLine($"VEJA ABAIXO A TABUADA DO {num}");
+for (int i = 1; i <= 10; i++)
+{
+    Console.WriteLine($"{num} * {i} = {num * i}");
+}
+//INSTRUÇÃO WHILE
+//1.Escreva um programa que permita ao usuário inserir números indefinidamente
+//até que um número negativo seja inserido. O programa deve calcular e exibir a soma de todos
+//os números positivos inseridos
+int numero;
+int soma = 0;
+
+Console.WriteLine("Digite números inteiros positivos. Para parar, digite um número negativo.");
+
+while (true)
+{
+    Console.Write("Digite um número: ");
+    numero = int.Parse(Console.ReadLine());
+
+    if (numero < 0)
+    {
+        break;
+    }
+
+    soma += numero;
+}
+
+Console.WriteLine($"A soma de todos os números positivos inseridos é: {soma}");
+
+////2.Escrever um programa que receba números indefinidamente e pare ao digitar zero. Após isso o programa
+////irá exibir a quantidade de numeros pares inseridos pelo usuário.
+int numero;
+int quantidadePares = 0;
+
+Console.WriteLine("Digite números inteiros positivos. Para parar, digite um número negativo.");
+
+while (true)
+{
+    Console.Write("Digite um número: ");
+    numero = int.Parse(Console.ReadLine());
+
+    if (numero == 0)
+    {
+        break;
+    }
+
+    if (numero % 2 == 0) // Verifica se o número é par
+    {
+        quantidadePares++;
+    }
+}
+
+Console.WriteLine($"A quantidade de números pares inseridos é: {quantidadePares}");
+
+////INSTRUÇÃO FOREACH
+//// 1. Escreva um programa que declare uma lista com 5 nomes e exiba-os na tela 
+//List<string> nomes = new List<string> { "Alice", "Bruno", "Carlos", "Daniela", "Eduardo" };
+
+Console.WriteLine("Os nomes na lista são:");
+
+foreach (string nome in nomes)
+{
+    Console.WriteLine(nome);
+}
+
+////INSTRUÇÃO DO-WHILE
+
+decimal saldo = 0;
+int opcao;
+
+do
+{
+    Console.Clear();
+    Console.WriteLine("Banco +Devs2Blu, seja bem-vindo!");
+    Console.WriteLine("1 - Consultar saldo");
+    Console.WriteLine("2 - Realizar depósito");
+    Console.WriteLine("3 - Realizar saque");
+    Console.WriteLine("4 - Sair");
+    Console.Write("Escolha uma opção: ");
+
+    // Lê a escolha do usuário e converte para um número inteiro
+    opcao = int.Parse(Console.ReadLine());
+
+    switch (opcao)
+    {
+        case 1: 
+            //saldo
+            Console.WriteLine($"\nSeu saldo atual é: R$ {saldo}");
+            break;
+
+        case 2: 
+            //depósito
+            Console.Write("\nDigite o valor do depósito: R$ ");
+            decimal deposito = decimal.Parse(Console.ReadLine());
+            if (deposito > 0)
+            {
+                saldo += deposito;
+                Console.WriteLine($"Depósito de R$ {deposito} realizado com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("Valor de depósito inválido!");
+            }
+            break;
+
+        case 3: 
+            // Realizar saque
+            Console.Write("\nDigite o valor do saque: R$ ");
+            decimal saque = decimal.Parse(Console.ReadLine());
+            if (saque > 0 && saque <= saldo)
+            {
+                saldo -= saque;
+                Console.WriteLine($"Saque de R$ {saque:F2} realizado com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("Saldo insuficiente ou valor de saque inválido!");
+            }
+            break;
+
+        case 4: 
+            // Sair
+            Console.WriteLine("\nObrigado por utilizar nossos serviços. Até mais!");
+            break;
+
+        default: 
+            // Opção inválida
+            Console.WriteLine("\nOpção inválida! Por favor, escolha uma opção válida.");
+            break;
+    }
+} while (opcao != 4);
